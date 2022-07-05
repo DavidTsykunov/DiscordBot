@@ -42,7 +42,7 @@ namespace DiscordBot_V._0_2
                 .BuildServiceProvider();
 
             
-            string token = "ODg1OTYyNjIwNjEwNDQxMjE2.YTuq_Q.O665mUBu7pVwIN0XNVRSRqOMbEk";
+            string token = "token";
 
             client.Log += Client_Log;
             client.Ready += OnReadyAsync;
@@ -119,7 +119,7 @@ namespace DiscordBot_V._0_2
             }
             else
             {
-                string path = $"C:\\Users\\david\\Desktop\\Work\\DiscordBot\\DiscordBot V.0-2\\Users\\{message.Author.Id}.xml";
+                string path = "path";
                 if (!File.Exists(path)) new Commands().CreateNewUserXML((IGuildUser)message.Author, path);
                 await new Commands().AddXpAsync((IGuildUser)message.Author, "1");
             }
@@ -129,7 +129,7 @@ namespace DiscordBot_V._0_2
         {
             if (user.IsBot) return;
 
-            string path = $"C:\\Users\\david\\Desktop\\Work\\Git\\DiscordBot\\DiscordBot V.0-2\\Users\\{user.Id}.xml";
+            string path = "path";
 
             new Commands().CreateNewUserXML(user, path);
         }
